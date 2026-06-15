@@ -1,0 +1,10 @@
+controllers:
+  resource: ../src/Controller/
+  type: attribute
+# config/routes.yaml
+register:
+  path: /register
+  controller: App\Controller\RegistrationController::register
+home:
+  path: /
+  controller: App\Controller\HomeController::index

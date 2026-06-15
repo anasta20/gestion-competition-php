@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create new Etudiant{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center mb-4">
+                <h2 class="display-4 text-primary title-frame"><b>Create new Etudiant</b></h2>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-primary text-white rounded-top">
+                        <h1 class="mb-0">Etudiant Details</h1>
+                    </div>
+
+                    <div class="card-body">
+                        {{ form_start(form, { 'attr': {'class': 'form-horizontal'} }) }}
+                            
+                            <div class="form-group">
+                                {{ form_label(form.name, 'Name', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Name'}}) }}
+                                {{ form_errors(form.name) }}
+                            </div>
+
+                            <div class="form-group">
+                                {{ form_label(form.prenom, 'Prenom', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Prenom'}}) }}
+                                {{ form_errors(form.prenom) }}
+                            </div>
+
+                            <div class="form-group">
+                                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                                {{ form_errors(form.email) }}
+                            </div>
+                             <div class="form-group">
+                                {{ form_label(form.etablissement, 'Etablissement', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.etablissement, {'attr': {'class': 'form-control', 'placeholder': 'Etablissement'}}) }}
+                                {{ form_errors(form.etablissement) }}
+                            </div>
+                             <div class="form-group">
+                                {{ form_label(form.telephone, 'Telephone', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.telephone, {'attr': {'class': 'form-control', 'placeholder': 'Telephone'}}) }}
+                                {{ form_errors(form.telephone) }}
+                            </div>
+                             <div class="form-group">
+                                {{ form_label(form.equipename, 'Equipe Name', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.equipename, {'attr': {'class': 'form-control', 'placeholder': 'Equipe Name'}}) }}
+                                {{ form_errors(form.equipename) }}
+                            </div>
+                             <div class="form-group">
+                                {{ form_label(form.deplacement, 'Deplacement', {'label_attr': {'class': 'form-label'}}) }}
+                                {{ form_widget(form.deplacement, {'attr': {'class': 'form-control', 'placeholder': 'Deplacement'}}) }}
+                                {{ form_errors(form.deplacement) }}
+                            </div>
+                            <div class="form-group">
+    {{ form_label(form.filiere, 'Filiere', {'label_attr': {'class': 'form-label'}}) }}
+    {{ form_widget(form.filiere, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.filiere) }}
+</div>
+
+
+                            <!-- And so on for each field in your form -->
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Save</button>
+                            </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
